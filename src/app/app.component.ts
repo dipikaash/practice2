@@ -11,7 +11,7 @@ import { Detail } from './detail.model';
 })
 export class AppComponent {
   title = 'demo';
-  dataTable = [];
+  // dataTable: Detail[] = [];
   data$ : Observable<Detail[]>;
 
  constructor(private http:HttpClient){}
