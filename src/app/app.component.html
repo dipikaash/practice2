@@ -20,7 +20,7 @@
     </div>
     <div class="row">
       <button type="submit" class="btn btn-secondary col-2">send data</button>
-      <button (click)="getData()" class="btn btn-primary col-2 offset-1">get data</button>
+      <button (click)="getAsyncData()" class="btn btn-primary col-2 offset-1">get data</button>
     </div> 
   </form>
   <div >
@@ -34,7 +34,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of dataTable">
+        <tr *ngFor="let item of data$ | async">
           <td>{{item.name}}</td>
           <td>{{item.age}}</td>
           <td>{{item.gender}}</td>
